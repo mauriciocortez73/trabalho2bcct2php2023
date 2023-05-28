@@ -1,7 +1,7 @@
 <?php
     namespace BLL; 
     use DAL\dalCliente; 
-    include_once '../../DAL/dalCliente.php';
+    include_once 'C:\xampp\htdocs\trabalho2bcct2php2023\DAL\dalCliente.php';
     
     class bllCliente {
         public function Select (){
