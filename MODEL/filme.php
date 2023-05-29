@@ -4,7 +4,7 @@
    class Filme{
         private ?int $id; 
         private ?string $titulo;
-        private ?date $ano;
+        private ?string $ano;
         private ?float $valor;
         private ?string $categoria;
         private ?int $ator;
@@ -34,7 +34,7 @@
             return $this->ano; 
         }
 
-        public function setValor(date $ano){
+        public function setValor(string $ano){
             $this->ano = $ano; 
         }
 
