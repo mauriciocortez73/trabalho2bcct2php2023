@@ -24,12 +24,14 @@
 <h3>Inserir Autor</h3><br>
 <label class="autor">ID: </label><input type="number" name="ID" size="50">
 <br>
-<label class="autor">Nome Artistico:  </label><input type="text" name="nameart" size="47">
+<label class="autor">Titulo:  </label><input type="text" name="nameart" size="47">
 <br>
-<label class="autor">Nome Real:  </label><input type="text" name="nomereal" size="47">
+<label class="autor">Ano:  </label><input type="date" name="ano" id="cano">
 <br>
+<label class="autor">Valor:  </label><input type="number" name="real" size="50">
 <br>
-<label class="autor">Data de Nascimento:  </label><input type="date" name="tData" id="cData">
+<label class="autor">Categoria:  </label><input type="text" name="cat" size="47">
+<br>
 <br>
 <p><input type="submit" value="Confirmar" name="confirmar"><input type="reset" value="Limpar" name="B2"></p>
 </form>
