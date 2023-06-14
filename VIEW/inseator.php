@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="center grey">
-        <h1> Inserir Ator/h1>
+        <h1> Inserir Ator </h1>
     </div>
     <div class= 'suportedois'>
 
