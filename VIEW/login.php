@@ -24,7 +24,7 @@
 
 <center>
 
-<img src='head2.jpg' height='150px' width='150px'>
+<img src='imagens/head2.jpg' height='150px' width='150px'>
 </center>
 <form>
 <br>
