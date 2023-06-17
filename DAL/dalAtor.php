@@ -25,9 +25,9 @@ use MODEL\Ator;
                $ator = new \MODEL\Ator();
 
                $ator->setId($linha['id']); 
-               $ator->setNome($linha['nome_artistico']);
-               $ator->setAniversario($linha['nome_real']); 
-               $ator->setSalario($linha['nascimento']);
+               $ator->setNomeArtistico($linha['nome_artistico']);
+               $ator->setNomeReal($linha['nome_real']); 
+               $ator->setNascimento($linha['nascimento']);
                $lstAtor[]= $ator; 
 
           }
@@ -46,11 +46,11 @@ use MODEL\Ator;
             $linha = $query->fetch(\PDO::FETCH_ASSOC);
             Conexao::desconectar(); 
 
-            $cliente = new \MODEL\Cliente(); 
-            $cliente->setId($linha['id']);
-            $cliente->setNomeArtistico($linha['nome_artistico']); 
-            $cliente->setNomeReal($linha['nome_real']); 
-            $cliente->setNascimento($linha['nascimento']); 
+            $ator = new \MODEL\Ator(); 
+            $ator->setId($linha['id']);
+            $ator->setNomeArtistico($linha['nome_artistico']); 
+            $ator->setNomeReal($linha['nome_real']); 
+            $ator->setNascimento($linha['nascimento']); 
 
             return $ator; 
 
@@ -58,9 +58,9 @@ use MODEL\Ator;
 
         public function Insert(\MODEL\Ator $ator){
             $con = Conexao::conectar(); 
-            $sql = "INSERT INTO cliente (nome_artistico, nome_real, nascimento) 
-                   VALUES  ('{$cliente->getNomeArtistico()}', '{$cliente->getNomeReal()}',
-                            '{$cliente->getNascimento()}');";
+            $sql = "INSERT INTO ator (nome_artistico, nome_real, nascimento) 
+                   VALUES  ('{$ator->getNomeArtistico()}', '{$ator->getNomeReal()}',
+                            '{$ator->getNascimento()}');";
      
             $result = $con->query($sql); 
             $con = Conexao::desconectar();
@@ -74,14 +74,14 @@ use MODEL\Ator;
             $pdo = Conexao::conectar(); 
             $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION); 
             $query = $pdo->prepare($sql);
-            $result = $query->execute(array($cliente->getNomeArtistico(), $cliente->getNomeReal(), 
-                                            $cliente->getNascimento(), $cliente->getId()));
+            $result = $query->execute(array($ator->getNomeArtistico(), $ator->getNomeReal(), 
+                                            $ator->getNascimento(), $ator->getId()));
             $con = Conexao::desconectar();
             return  $result; 
         }
 
 
-        public function DElete(int $id){
+        public function Delete(int $id){
             $sql = "DELETE from ator WHERE id=?";
 
             $pdo = Conexao::conectar(); 

@@ -8,10 +8,10 @@
         private ?float $valor;
         private ?string $categoria;
         private ?int $ator;
-        
+
         public function __construct() 
         {
-            
+
         }
 
         public function getId() {
@@ -34,12 +34,12 @@
             return $this->ano; 
         }
 
-        public function setValor(string $ano){
+        public function setAno(string $ano){
             $this->ano = $ano; 
         }
 
-        public function getAno() {
-            return $this->ano;
+        public function getValor() {
+            return $this->valor; 
         }
 
         public function setValor(float $valor){
@@ -50,7 +50,7 @@
             return $this->categoria; 
         }
 
-        public function setEmail(string $categoria){
+        public function setCategoria(float $categoria){
             $this->categoria = $categoria; 
         }
 

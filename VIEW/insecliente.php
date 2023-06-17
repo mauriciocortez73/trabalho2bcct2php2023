@@ -19,19 +19,34 @@
     <div class= 'suportedois'>
 
 
-   <div style="margin-top: 30px;" class="container">
+<div style="margin-top: 30px;" class="container">
 <form method="POST" action="">
 
-<h3>Inserir Autor</h3><br>
-<label class="autor">ID: </label><input type="number" name="ID" size="50">
+<h3>Inserir Ator</h3><br>
+<label for="id" >ID: <?php echo $cliente->getId(); ?></label>
+                 </br> </br>
+                 <input type="hidden" name="txtID" value=<?php echo $id; ?>>
 <br>
-<label class="autor">Nome:  </label><input type="text" name="nameart" size="47">
+<label for="id" >Nome Artistico: <?php echo $cliente->getNome(); ?></label>
+                 </br> </br>
+                 <input type="hidden" name="txtID" value=<?php echo $nome; ?>>
 <br>
-<label class="autor">E-Mail:  </label><input type="text" name="email" size="47">
+<label for="id" >Nome Real: <?php echo $cliente->getCelular(); ?></label>
+                 </br> </br>
+                 <input type="hidden" name="txtID" value=<?php echo $celular; ?>>
 <br>
-<label class="autor">Celular:  </label><input type="number" name="tel" size="47">
+<label for="id" >Nome Real: <?php echo $cliente->getEmail(); ?></label>
+                 </br> </br>
+                 <input type="hidden" name="txtID" value=<?php echo $email     ; ?>>
 <br>
+<label for="id" >ID: <?php echo $ator->getId(); ?></label>
+                    </br> </br>
+                    <input type="hidden" name="txtID" value=<?php echo $id; ?>>
 <br>
+
+            
+
+
 <p><input type="submit" value="Confirmar" name="confirmar"><input type="reset" value="Limpar" name="B2"></p>
 </form>
 <br>

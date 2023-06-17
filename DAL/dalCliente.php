@@ -26,8 +26,8 @@ use MODEL\Cliente;
 
                $cliente->setId($linha['id']); 
                $cliente->setNome($linha['nome']);
-               $cliente->setAniversario($linha['celular']); 
-               $cliente->setSalario($linha['email']);
+               $cliente->setCelular($linha['celular']); 
+               $cliente->setEmail($linha['email']);
                $lstCliente[]= $cliente; 
 
           }
@@ -47,10 +47,10 @@ use MODEL\Cliente;
             Conexao::desconectar(); 
 
             $cliente = new \MODEL\Cliente(); 
-            $cliente->setId($linha['id']);
-            $cliente->setNome($linha['nome']); 
-            $cliente->setAniversario($linha['celular']); 
-            $cliente->setSalario($linha['email']); 
+            $cliente->setId($linha['id']); 
+            $cliente->setNome($linha['nome']);
+            $cliente->setCelular($linha['celular']); 
+            $cliente->setEmail($linha['email']);
 
             return $cliente; 
 
@@ -81,7 +81,7 @@ use MODEL\Cliente;
         }
 
 
-        public function DElete(int $id){
+        public function Delete(int $id){
             $sql = "DELETE from cliente WHERE id=?";
 
             $pdo = Conexao::conectar(); 
