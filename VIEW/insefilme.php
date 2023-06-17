@@ -22,25 +22,25 @@
 <form method="POST" action="">
 
 <h3>Inserir Ator</h3><br>
-<label for="id" >ID: <?php echo $cliente->getId(); ?></label>
+<label for="id" >ID: <?php echo $filme->getId(); ?></label>
                  </br> </br>
                  <input type="hidden" name="txtID" value=<?php echo $id; ?>>
 <br>
-<label for="id" >Nome Artistico: <?php echo $cliente->getTitulo(); ?></label>
+<label for="titulo" >Titulo: <?php echo $filme->getTitulo(); ?></label>
                  </br> </br>
-                 <input type="hidden" name="txtID" value=<?php echo $nome; ?>>
+                 <input type="hidden" name="txtID" value=<?php echo $titulo; ?>>
 <br>
-<label for="id" >Nome Real: <?php echo $cliente->getAno(); ?></label>
+<label for="ano" >Ano: <?php echo $filme->getAno(); ?></label>
                  </br> </br>
-                 <input type="hidden" name="txtID" value=<?php echo $celular; ?>>
+                 <input type="hidden" name="txtID" value=<?php echo $ano; ?>>
 <br>
-<label for="id" >Nome Real: <?php echo $cliente->getValor(); ?></label>
+<label for="valor" >Valor: <?php echo $filme->getValor(); ?></label>
                  </br> </br>
-                 <input type="hidden" name="txtID" value=<?php echo $email     ; ?>>
+                 <input type="hidden" name="txtID" value=<?php echo $valor     ; ?>>
 <br>
-<label for="id" >Nome Real: <?php echo $cliente->getCategoria(); ?></label>
+<label for="categoria" >Categoria: <?php echo $filme->getCategoria(); ?></label>
                  </br> </br>
-                 <input type="hidden" name="txtID" value=<?php echo $celular; ?>>
+                 <input type="hidden" name="txtID" value=<?php echo $categoria; ?>>
 <br>
 
             

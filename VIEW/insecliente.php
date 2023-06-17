@@ -27,17 +27,17 @@
                  </br> </br>
                  <input type="hidden" name="txtID" value=<?php echo $id; ?>>
 <br>
-<label for="id" >Nome Artistico: <?php echo $cliente->getNome(); ?></label>
+<label for="nome" >Nome: <?php echo $cliente->getNome(); ?></label>
                  </br> </br>
                  <input type="hidden" name="txtID" value=<?php echo $nome; ?>>
 <br>
-<label for="id" >Nome Real: <?php echo $cliente->getCelular(); ?></label>
+<label for="celular" >Celular: <?php echo $cliente->getCelular(); ?></label>
                  </br> </br>
                  <input type="hidden" name="txtID" value=<?php echo $celular; ?>>
 <br>
-<label for="id" >Nome Real: <?php echo $cliente->getEmail(); ?></label>
+<label for="email" >Email: <?php echo $cliente->getEmail(); ?></label>
                  </br> </br>
-                 <input type="hidden" name="txtID" value=<?php echo $email     ; ?>>
+                 <input type="hidden" name="txtID" value=<?php echo $email; ?>>
 <br>
 <label for="id" >ID: <?php echo $ator->getId(); ?></label>
                     </br> </br>

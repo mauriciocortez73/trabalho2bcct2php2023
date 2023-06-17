@@ -26,11 +26,11 @@
                     </br> </br>
                     <input type="hidden" name="txtID" value=<?php echo $id; ?>>
 <br>
-<label for="id" >Nome Artistico: <?php echo $ator->getNomeArtistico(); ?></label>
+<label for="nomeartistico" >Nome Artistico: <?php echo $ator->getNomeArtistico(); ?></label>
                     </br> </br>
                     <input type="hidden" name="txtID" value=<?php echo $nome_artistico; ?>>
 <br>
-<label for="id" >Nome Real: <?php echo $ator->getNomeReal(); ?></label>
+<label for="nomereal" >Nome Real: <?php echo $ator->getNomeReal(); ?></label>
                     </br> </br>
                     <input type="hidden" name="txtID" value=<?php echo $nome_real; ?>>
 <br>
