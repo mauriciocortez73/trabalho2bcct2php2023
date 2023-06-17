@@ -29,7 +29,7 @@ use MODEL\Ator;
                $ator->setNomeReal($linha['nome_real']); 
                $ator->setNascimento($linha['nascimento']);
                $lstAtor[]= $ator; 
-
+  
           }
           
 
