@@ -21,15 +21,26 @@
    <div style="margin-top: 30px;" class="container">
 <form method="POST" action="">
 
-<h3>Inserir Autor</h3><br>
-<label class="autor">ID: </label><input type="number" name="ID" size="50">
+<h3>Inserir Ator</h3><br>
+<label for="id" >ID: <?php echo $ator->getId(); ?></label>
+                    </br> </br>
+                    <input type="hidden" name="txtID" value=<?php echo $id; ?>>
 <br>
-<label class="autor">Nome Artistico:  </label><input type="text" name="nameart" size="47">
+<label for="id" >Nome Artistico: <?php echo $ator->getNomeArtistico(); ?></label>
+                    </br> </br>
+                    <input type="hidden" name="txtID" value=<?php echo $nome_artistico; ?>>
 <br>
-<label class="autor">Nome Real:  </label><input type="text" name="nomereal" size="47">
+<label for="id" >Nome Real: <?php echo $ator->getNomeReal(); ?></label>
+                    </br> </br>
+                    <input type="hidden" name="txtID" value=<?php echo $nome_real; ?>>
 <br>
+
+
+               
+
 <br>
-<label class="autor">Data de Nascimento:  </label><input type="date" name="tData" id="cData">
+<input id="aniversario" type="date" name="txtAniversario" value="<?php echo $ator->getNascimento() ?>">
+ <label for="aniversario" class="black-text bold">Nascimento: </label>
 <br>
 <p><input type="submit" value="Confirmar" name="confirmar"><input type="reset" value="Limpar" name="B2"></p>
 </form>

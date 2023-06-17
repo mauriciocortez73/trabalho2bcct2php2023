@@ -6,10 +6,10 @@
         private ?string $nome_artistico; 
         private ?string $nome_real; 
         private ?string $nascimento;
-        
+
         public function __construct() 
         {
-            
+
         }
 
         public function getId() {
@@ -28,8 +28,7 @@
             $this->nome_artistico = $nome_artistico; 
         }
 
-
-        public function getCelular() {
+        public function getNomeReal() {
             return $this->nome_real; 
         }
 
