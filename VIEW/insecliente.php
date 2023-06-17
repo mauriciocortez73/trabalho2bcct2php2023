@@ -23,23 +23,23 @@
 <form method="POST" action="">
 
 <h3>Inserir Ator</h3><br>
-<label for="id" >ID: <?php echo $cliente->getId(); ?></label>
+<label for="id" >ID: <?php echo $cliente->setId(); ?></label>
                  </br> </br>
                  <input type="hidden" name="txtID" value=<?php echo $id; ?>>
 <br>
-<label for="nome" >Nome: <?php echo $cliente->getNome(); ?></label>
+<label for="nome" >Nome: <?php echo $cliente->setNome(); ?></label>
                  </br> </br>
                  <input type="hidden" name="txtID" value=<?php echo $nome; ?>>
 <br>
-<label for="celular" >Celular: <?php echo $cliente->getCelular(); ?></label>
+<label for="celular" >Celular: <?php echo $cliente->setCelular(); ?></label>
                  </br> </br>
                  <input type="hidden" name="txtID" value=<?php echo $celular; ?>>
 <br>
-<label for="email" >Email: <?php echo $cliente->getEmail(); ?></label>
+<label for="email" >Email: <?php echo $cliente->setEmail(); ?></label>
                  </br> </br>
                  <input type="hidden" name="txtID" value=<?php echo $email; ?>>
 <br>
-<label for="id" >ID: <?php echo $ator->getId(); ?></label>
+<label for="id" >ID: <?php echo $ator->setId(); ?></label>
                     </br> </br>
                     <input type="hidden" name="txtID" value=<?php echo $id; ?>>
 <br>

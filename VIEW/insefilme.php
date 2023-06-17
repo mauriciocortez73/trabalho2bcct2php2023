@@ -22,23 +22,23 @@
 <form method="POST" action="">
 
 <h3>Inserir Ator</h3><br>
-<label for="id" >ID: <?php echo $filme->getId(); ?></label>
+<label for="id" >ID: <?php echo $filme->setId(); ?></label>
                  </br> </br>
                  <input type="hidden" name="txtID" value=<?php echo $id; ?>>
 <br>
-<label for="titulo" >Titulo: <?php echo $filme->getTitulo(); ?></label>
+<label for="titulo" >Titulo: <?php echo $filme->setTitulo(); ?></label>
                  </br> </br>
                  <input type="hidden" name="txtID" value=<?php echo $titulo; ?>>
 <br>
-<label for="ano" >Ano: <?php echo $filme->getAno(); ?></label>
+<label for="ano" >Ano: <?php echo $filme->setAno(); ?></label>
                  </br> </br>
                  <input type="hidden" name="txtID" value=<?php echo $ano; ?>>
 <br>
-<label for="valor" >Valor: <?php echo $filme->getValor(); ?></label>
+<label for="valor" >Valor: <?php echo $filme->setValor(); ?></label>
                  </br> </br>
                  <input type="hidden" name="txtID" value=<?php echo $valor     ; ?>>
 <br>
-<label for="categoria" >Categoria: <?php echo $filme->getCategoria(); ?></label>
+<label for="categoria" >Categoria: <?php echo $filme->setCategoria(); ?></label>
                  </br> </br>
                  <input type="hidden" name="txtID" value=<?php echo $categoria; ?>>
 <br>

@@ -22,15 +22,15 @@
 <form method="POST" action="">
 
 <h3>Inserir Ator</h3><br>
-<label for="id" >ID: <?php echo $ator->getId(); ?></label>
+<label for="id" >ID: <?php echo $ator->setId(); ?></label>
                     </br> </br>
                     <input type="hidden" name="txtID" value=<?php echo $id; ?>>
 <br>
-<label for="nomeartistico" >Nome Artistico: <?php echo $ator->getNomeArtistico(); ?></label>
+<label for="nomeartistico" >Nome Artistico: <?php echo $ator->setNomeArtistico(); ?></label>
                     </br> </br>
                     <input type="hidden" name="txtID" value=<?php echo $nome_artistico; ?>>
 <br>
-<label for="nomereal" >Nome Real: <?php echo $ator->getNomeReal(); ?></label>
+<label for="nomereal" >Nome Real: <?php echo $ator->setNomeReal(); ?></label>
                     </br> </br>
                     <input type="hidden" name="txtID" value=<?php echo $nome_real; ?>>
 <br>
@@ -39,7 +39,7 @@
                
 
 <br>
-<input id="aniversario" type="date" name="txtAniversario" value="<?php echo $ator->getNascimento() ?>">
+<input id="aniversario" type="date" name="txtAniversario" value="<?php echo $ator->setNascimento() ?>">
  <label for="aniversario" class="black-text bold">Nascimento: </label>
 <br>
 <p><input type="submit" value="Confirmar" name="confirmar"><input type="reset" value="Limpar" name="B2"></p>
