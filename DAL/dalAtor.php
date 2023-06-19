@@ -28,12 +28,12 @@ use MODEL\Ator;
                $ator->setNomeArtistico($linha['nome_artistico']);
                $ator->setNomeReal($linha['nome_real']); 
                $ator->setNascimento($linha['nascimento']);
-               $lstAtor[]= $ator; 
+               $lstator[]= $ator; 
   
           }
           
 
-          return $lstAtor; 
+          return $lstator; 
              
         }
 
