@@ -28,7 +28,7 @@ use MODEL\Ator;
                $ator->setNomeArtistico($linha['nome_artistico']);
                $ator->setNomeReal($linha['nome_real']); 
                $ator->setNascimento($linha['nascimento']);
-               $lstator[]= $ator; 
+               $lstator[]= $ator;
   
           }
           
@@ -55,6 +55,34 @@ use MODEL\Ator;
             return $ator; 
 
         }
+
+        public function SelectNome(string $nome){
+
+            $sql = "select * from ator WHERE nome like  '%" . $nome .  "%' order by nome;";
+  
+            $pdo = Conexao::conectar(); 
+            $query = $pdo->prepare($sql);
+            $result = $pdo->query($sql); 
+                      
+            // echo count ($result);
+            $lstAtor = null; 
+            foreach($result as $linha){
+                          
+              $ator = new \MODEL\Ator();
+      
+              $ator->setId($linha['id']);
+              $ator->setNomeArtistico($linha['nome_artistico']);
+	          $ator->setNomeReal($linha['nome_real']); 
+  
+              $date = date_create($linha['nascimento']);
+              $ator->setNascimento(date_format($date, 'd-m-Y')); 
+      
+              $lstator[] = $ator; 
+  
+            }
+            return  $lstator;
+  
+          }
 
         public function Insert(\MODEL\Ator $ator){
             $con = Conexao::conectar(); 
