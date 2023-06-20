@@ -1,16 +1,16 @@
 <?php
-    include_once 'C:\xampp\htdocs\trabalho2bcct2php2023\MODEL\ator.php';
-    include_once 'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllator.php';
+    include_once 'C:\xampp\htdocs\trabalho2bcct2php2023\MODEL\cliente.php';
+    include_once 'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllcliente.php';
 
-   $operador = new \MODEL\Ator(); 
+   $cliente = new \MODEL\cliente(); 
    
-   $operador->setNomeArtistico($_POST['txtNomeArtistico']);
-   $operador->setNomeReal($_POST['txtNomeReal']);
-   $operador->setNascimento($_POST['txtNascimento']); 
+   $cliente->setNome($_POST['txtNome']);
+   $cliente->setCelular($_POST['txtCelular']);
+   $cliente->setEmail($_POST['txtEmail']); 
 
-   $bll = new \BLL\bllAtor(); 
-   $bll->Insert($ator); 
+   $bll = new \BLL\bllcliente(); 
+   $bll->Insert($cliente); 
    
-   header("location: lstator.php");
+   header("location: lstcliente.php");
   
 ?>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inserir Cliente</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -39,10 +39,7 @@
                  </br> </br>
                  <input type="hidden" name="txtID" value=<?php echo $email; ?>>
 <br>
-<label for="id" >ID: <?php echo $ator->setId(); ?></label>
-                    </br> </br>
-                    <input type="hidden" name="txtID" value=<?php echo $id; ?>>
-<br>
+
 
             
 

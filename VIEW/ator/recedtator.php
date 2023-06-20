@@ -5,9 +5,9 @@
    $ator = new \MODEL\Ator(); 
    
    $ator->setId($_POST['txtID']);
-   $ator->setNome($_POST['txtNomeArtistico']);
-   $ator->setAniversario($_POST['txtNomeReal']);
-   $ator->setSalario($_POST['txtNascimento']); 
+   $ator->setNomeArtistico($_POST['txtNomeArtistico']);
+   $ator->setNomeReal($_POST['txtNomeReal']);
+   $ator->setNascimento($_POST['txtNascimento']); 
 
    $bll = new \BLL\bllAtor(); 
    $bll->Update($ator); 

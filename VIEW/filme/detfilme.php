@@ -1,8 +1,8 @@
 <?php
-include_once 'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllator.php';
+include_once 'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllfilme.php';
 $id = $_GET['id'];
 
-$bll = new  \BLL\bllAtor();
+$bll = new  \BLL\bllfilme();
 $ator = $bll->SelectID($id);
 
 ?>
@@ -30,46 +30,52 @@ $ator = $bll->SelectID($id);
 
     <div class="container teal lighten-5 black-text col s12">
         <div class="center orange">
-            <h1>Detalhes do Ator</h1>
+            <h1>Detalhes do Filme</h1>
         </div>
 
         <div class="row">
             <div class="input-field col s8">
                 <label for="id" class="black-text bold">
-                    <h5>ID: <?php echo $ator->getId(); ?></h5>
+                    <h5>ID: <?php echo $filme->getId(); ?></h5>
                 </label>
                 <br>
                 <input type="hidden" name="txtID" value=<?php echo $id; ?>>
             </div>
             <div class="input-field col s8">
-                <label for="nomeartistico" class="black-text bold">
-                    <h5>Nome Artistico: <?php echo $ator->getNomeArtistico(); ?></h5>
+                <label for="titulo" class="black-text bold">
+                    <h5>Titulo: <?php echo $filme->getTitulo(); ?></h5>
                 </label>
                 </br><br>
             </div>
 	    <div class="input-field col s8">
-                <label for="nomereal" class="black-text bold">
-                    <h5>Nome Real: <?php echo $ator->getNomeReal(); ?></h5>
+                <label for="ano" class="black-text bold">
+                    <h5>Ano: <?php echo $filme->getAno(); ?></h5>
                 </label>
                 </br> </br><br>
             </div>
             <div class="input-field col s8">
-                <label for="nascimento" class="black-text bold">
-                    <h5>Nascimento: <?php echo $ator->getNascimento(); ?></h5>
+                <label for="valor" class="black-text bold">
+                    <h5>Valor: <?php echo $filme->getValor(); ?></h5>
+                </label>
+                </br><br>
+            </div>
+            <div class="input-field col s8">
+                <label for="categoria" class="black-text bold">
+                    <h5>Categoria: <?php echo $filme->getCategoria(); ?></h5>
                 </label>
                 </br><br>
             </div>
         </div>
         <div class="brown lighten-3 center col s12">
             <br>
-            <button class="waves-effect waves-light btn orange" type="button" onclick="JavaScript:location.href='edtator.php?id=' +
-                                     <?php echo $ator->getId(); ?>">
+            <button class="waves-effect waves-light btn orange" type="button" onclick="JavaScript:location.href='edtfilme.php?id=' +
+                                     <?php echo $filme->getId(); ?>">
                 Editar <i class="material-icons">edit</i>
             </button>
-            <button class="waves-effect waves-light btn red" type="button" onclick="JavaScript: remover(<?php echo $ator->getId(); ?>);">
+            <button class="waves-effect waves-light btn red" type="button" onclick="JavaScript: remover(<?php echo $filme->getId(); ?>);">
                 Remover <i class="material-icons">delete_forever</i>
             </button>
-            <button class="waves-effect waves-light btn blue" type="button" onclick="JavaScript:location.href='lstator.php'">
+            <button class="waves-effect waves-light btn blue" type="button" onclick="JavaScript:location.href='lstfilme.php'">
                 Listar <i class="material-icons">list</i>
             </button>
             <br>
@@ -83,8 +89,8 @@ $ator = $bll->SelectID($id);
 
 <script>
     function remover(id) {
-        if (confirm('Excluir o Ator ' + id + '?')) {
-            location.href = 'remator.php?id=' + id;
+        if (confirm('Excluir o Filme ' + id + '?')) {
+            location.href = 'remfilme.php?id=' + id;
         }
     }
 </script>

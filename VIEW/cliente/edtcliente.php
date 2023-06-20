@@ -1,9 +1,9 @@
 <?php
-include_once  'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllator.php';
+include_once  'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllcliente.php';
 
 $id = $_GET['id'];
 
-$bll = new  \BLL\bllAtor();
+$bll = new  \BLL\bllcliente();
 $ator = $bll->SelectID($id);
 
 ?>
@@ -16,7 +16,7 @@ $ator = $bll->SelectID($id);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Ator</title>
+    <title>Editar Cliente</title>
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -31,28 +31,28 @@ $ator = $bll->SelectID($id);
 <body>
     <div class="container teal lighten-5 black-text col s12">
         <div class="center orange">
-            <h1>Editar Ator</h1>
+            <h1>Editar Cliente</h1>
         </div>
 
         <div class="row">
             <form action="recedtator.php" method="POST" id="frminsAtor" class="col s12">
                 <div class="input-field col s8">
-                    <label for="id" class="black-text bold">ID: <?php echo $Ator->getId(); ?></label>
+                    <label for="id" class="black-text bold">ID: <?php echo $cliente->getId(); ?></label>
                     </br> </br>
                     <input type="hidden" name="txtID" value=<?php echo $id; ?>>
                 </div>
 
                 <div class="input-field col s8">
-                    <input id="nomeartistico" type="text" name="txtNomeArtistico" value="<?php echo $ator->getNomeArtistico() ?>">
-                    <label for="nomeartistico" class="black-text bold">Nome Artistico</label>
+                    <input id="nome" type="text" name="txtNome" value="<?php echo $cliente->getNome() ?>">
+                    <label for="nome" class="black-text bold">Nome</label>
                 </div>
                 <div class="input-field col s8">
-                    <input id="nomereal" type="text" name="txtNomeReal" value="<?php echo $ator->getNomeReal() ?>">
-                    <label for="nomereal" class="black-text bold">Nome Real</label>
+                    <input id="celular" type="text" name="txtCelular" value="<?php echo $cliente->getCelular() ?>">
+                    <label for="celular" class="black-text bold">Celular</label>
                 </div>
                 <div class="input-field col s8">
-                    <input id="nascimento" type="date" name="txtNascimento" value="<?php echo $ator->getNascimento() ?>">
-                    <label for="nascimento" class="black-text bold">Aniversário</label>
+                    <input id="email" type="date" name="txtEmail" value="<?php echo $cliente->getEmail() ?>">
+                    <label for="email" class="black-text bold">E-mail</label>
                 </div>
                 <div class="brown lighten-3 center col s12">
                     <br>
@@ -62,7 +62,7 @@ $ator = $bll->SelectID($id);
                     <button class="waves-effect waves-light btn red" type="reset">
                         Limpar <i class="material-icons">clear_all</i>
                     </button>
-                    <button class="waves-effect waves-light btn blue" type="button" onclick="JavaScript:location.href='lstator.php'">
+                    <button class="waves-effect waves-light btn blue" type="button" onclick="JavaScript:location.href='lstcliente.php'">
                         Voltar <i class="material-icons">arrow_back</i>
                     </button>
                     <br>

@@ -1,11 +1,11 @@
 <?php
-    include_once 'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllator.php';
+    include_once 'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllfilme.php';
 
     $id = $_GET['id'];
 
-   $bll = new \BLL\bllAtor(); 
+   $bll = new \BLL\bllfilme(); 
    $bll->Delete($id); 
    
-   header("location: lstator.php");
+   header("location: lstfilme.php");
   
 ?>

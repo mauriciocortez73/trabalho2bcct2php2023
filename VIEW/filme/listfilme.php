@@ -1,9 +1,9 @@
 <?php
 
 
-use BLL\bllAtor;
+use BLL\bllfilme;
 
-include_once  'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllator.php';
+include_once  'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllfilme.php';
 
 if (isset($_GET['busca']))
     $busca = $_GET['busca'];
@@ -11,11 +11,11 @@ else $busca = null;
 
 echo "Busca: " . $busca . "</br>";
 
-$bll = new \bll\bllAtor();
+$bll = new \bll\bllfilme();
 
 if ($busca == null)
-    $lstator = $bll->Select();
-else $lstator = $bll->SelectNome($busca);
+    $lstfilme = $bll->Select();
+else $lstfilme = $bll->SelectNome($busca);
           
 ?>
 
@@ -34,7 +34,7 @@ else $lstator = $bll->SelectNome($busca);
 
 
 
-    <title>Listar Atores</title>
+    <title>Listar Filmes</title>
 </head>
 
 <body>
@@ -42,9 +42,9 @@ else $lstator = $bll->SelectNome($busca);
     <h1>Listar Atores</h1>
     <div class="row">
             <div class="input-field">
-                <form action="../ator/lstator.php" method="GET" id="frmBuscaAtor" class="col s8">
+                <form action="../filme/lstfilme.php" method="GET" id="frmBuscaFilme" class="col s8">
                     <div class="input-field col s8">
-                        <input type="text" placeholder="informe o nome do Ator para ser selicionado" class="form-control col s10" id="txtBusca" name="busca">
+                        <input type="text" placeholder="informe o nome do Filme para ser selecionado" class="form-control col s10" id="txtBusca" name="busca">
                         <button class="btn waves-effect waves-light col m1" type="submit" name="action">
                             <i class="material-icons right">search</i></button>
                     </div>
@@ -55,34 +55,36 @@ else $lstator = $bll->SelectNome($busca);
 <table class="striped green lighten-2">
     <tr>
         <th>ID</th>
-        <th>NOME ARTISTICO</th>
-        <th>NOME REAL</th>
-        <th>NASCIMENTO</th>
+        <th>TITULO</th>
+        <th>ANO</th>
+        <th>VALOR</th>
+        <th>CATEGORIA</th>
         <th>FUNÇÃO
-            <a class="btn-floating btn-small waves-effect waves-light green" onclick="JavaScript:location.href='insarea.php'">
+            <a class="btn-floating btn-small waves-effect waves-light green" onclick="JavaScript:location.href='insfilme.php'">
                 <i class="material-icons">add</i>
             </a>
         </th>
     </tr>
     <?php
-    if ($lstator != null)
-        foreach ($lstator as $ator) {
+    if ($lstfilme != null)
+        foreach ($lstfilme as $filme) {
     ?>
         <tr>
-            <td><?php echo $ator->getId(); ?></td>
-            <td><?php echo $ator->getNomeArtistico(); ?></td>
-            <td><?php echo $ator->getNomeReal(); ?></td>
-            <td><?php echo $ator->getNascimento(); ?></td>
+            <td><?php echo $filme->getId(); ?></td>
+            <td><?php echo $filme->getTitulo(); ?></td>
+            <td><?php echo $filme->getAno(); ?></td>
+            <td><?php echo $filme->getValor(); ?></td>
+            <td><?php echo $filme->getCategoria(); ?></td>
             <td>
-                <a class="btn-floating btn-small waves-effect waves-light blue" onclick="JavaScript:location.href='detator.php?id=' + 
+                <a class="btn-floating btn-small waves-effect waves-light blue" onclick="JavaScript:location.href='detfilme.php?id=' + 
                        <?php echo $ator->getId(); ?>">
                     <i class="material-icons">details</i>
                 </a>
-                <a class="btn-floating btn-small waves-effect waves-light orange" onclick="JavaScript:location.href='edtator.php?id=' + 
+                <a class="btn-floating btn-small waves-effect waves-light orange" onclick="JavaScript:location.href='edtfilme.php?id=' + 
                        <?php echo $ator->getId(); ?>">
                     <i class="material-icons">edit</i>
                 </a>
-                <a class="btn-floating btn-small waves-effect waves-light red" onclick="JavaScript:remover(<?php echo $ator->getId(); ?>)">
+                <a class="btn-floating btn-small waves-effect waves-light red" onclick="JavaScript:remover(<?php echo $filme->getId(); ?>)">
                     <i class="material-icons">delete_forever</i>
                 </a>
             </td>
