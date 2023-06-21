@@ -1,46 +1,30 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<?php
+include_once 'C:\xampp\htdocs\lpbcct2php2023\BLL\bllUsuario.php';
+include_once 'C:\xampp\htdocs\lpbcct2php2023\MODEL\usuario.php';
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
-       <!-- My CSS -->
-   <link rel="stylesheet" href="../VIEW/css/style.css">
-</head>
-<body>
+$usuario = trim($_POST['usuario']);
+$senha = trim($_POST['senha']);
 
+echo "Usuario: " . $usuario . "</br>";
+echo "Senha: " . md5($senha) . "</br>" . "</br>";
 
-<center>
-<div class= 'suportedois'>
+$bll = new  \BLL\bllUsuario();
 
+$objUsuario = new \MODEL\Usuario();
 
+$objUsuario = $bll->SelectUser($usuario);
 
-<center>
+if ($objUsuario != null) {
+    //echo "UsuarioDB: " . $objUsuario->getUsuario() . "</br>";
+    //echo "SenhaDB: " . $objUsuario->getSenha() . "</br>" . "</br>";
+    if (md5($senha) == $objUsuario->getSenha()){
+        session_start();
+        $_SESSION['login'] =  $objUsuario->getUsuario() ;
+        header("location:menu.php");
+    }
+    else header("location:index.php");
+}
+else echo "usuario não encontrado";
 
-<img src='imagens/head2.jpg' height='150px' width='150px'>
-</center>
-<form>
-<br>
-<fieldset>
-            
-		</fieldset>
-        
-
-
-<INPUT TYPE="submit"></TD></TR>
-<INPUT type="reset" name="Limpar" value="Limpar" ><br>
-</fieldset>
-</form>
-</div>
-</center>
-<br>
-<br>
-</body>
-</html>
+?>
