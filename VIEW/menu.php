@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
-    <title>Sistema Prestação de Serviços de Maquinas</title>
+    <title>Sistema de Controle Locadora</title>
 </head>
 
 <body>
@@ -30,11 +30,11 @@
                 <img src="../imagens/trator.jpg"  width="50" height="65">
             </a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="\lpbcct2php2023\VIEW\operador\lstoperador2.php">Operador</a></li>
-                <li><a href="../operador/lstoperador2.php">Máquinas</a></li>
-                <li><a href="collapsible.html">Equipamentos</a></li>
-                <li><a href="/lpbcct2php2023/VIEW/area/lstarea.php">Area</a></li>
-                <li><a href="/lpbcct2php2023/view/logout.php">Logout</a></li>
+                <li><a href="\trabalho2bcct2php2023\VIEW\cliente\lstcliente.php">Cliente</a></li>
+                <li><a href="\trabalho2bcct2php2023\VIEW\ator\lstator.php">Atores</a></li>
+                <li><a href="\trabalho2bcct2php2023\VIEW\filme\lstfilme.php">Filmes</a></li>
+                <li><a href="\trabalho2bcct2php2023\VIEW\empfilme.php">Emprestar filme</a></li>
+                <li><a href="\trabalho2bcct2php2023\VIEW\logout.php">Logout</a></li>
             </ul>
         </div>
     </nav>
