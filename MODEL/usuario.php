@@ -1,24 +1,24 @@
 <?php 
-namespace MODEL; 
+    namespace MODEL; 
 
-class Usuario {
-    private ?int $id; 
-    private ?string $usuario; 
-    private ?string $senha;
-    private ?string $email; 
+    class Usuario{
+        private ?int $id; 
+        private ?string $usuario; 
+        private ?string $senha;
+        private ?string $email; 
     
-    public function __construct()
-    {
+        public function __construct()
+        {
      
-    }
+        }
 
-    public function getId(){
-        return $this->id; 
-    }
+        public function getId(){
+            return $this->id; 
+        }
     
-    public function setId(int $id){
-        $this->id = $id; 
-    }
+        public function setId(int $id){
+            $this->id = $id; 
+        }
 
 
     public function getUsuario(){
@@ -48,3 +48,5 @@ class Usuario {
 
     
 }
+
+?>

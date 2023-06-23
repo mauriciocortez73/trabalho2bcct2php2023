@@ -1,7 +1,6 @@
-
 <?php
-include_once 'C:\xampp\htdocs\lpbcct2php2023\BLL\bllUsuario.php';
-include_once 'C:\xampp\htdocs\lpbcct2php2023\MODEL\usuario.php';
+include_once 'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllUsuario.php';
+include_once 'C:\xampp\htdocs\trabalho2bcct2php2023\MODEL\Usuario.php';
 
 $usuario = trim($_POST['usuario']);
 $senha = trim($_POST['senha']);

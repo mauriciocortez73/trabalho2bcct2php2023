@@ -1,7 +1,7 @@
 <?php
     namespace BLL; 
     use DAL\dalUsuario; 
-    include_once 'C:\xampp\htdocs\lpbcct2php2023\DAL\dalUsuario.php';
+    include_once 'C:\xampp\htdocs\trabalho2bcct2php2023\DAL\dalUsuario.php';
     
     class bllUsuario {
    
@@ -12,3 +12,4 @@
             return $dal->SelectUser($usuario);
         }
     }
+?>

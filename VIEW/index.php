@@ -34,7 +34,7 @@
             <div class="row"><br>
                 <div class="col m8 s8 offset-m2 offset-s2 center">
                     <h4 class="truncate bg-card-user">
-                        <img src="../VIEW/imagens/fema.png" alt="" height="110">
+                        <img src="../VIEW/imagens/head2.png" alt="" height="110">
                         <div class="row login">
                             <h4>Informe os seus dados de acesso!!!!</h4>
                             <form method="POST" action="login.php" class="col s12">

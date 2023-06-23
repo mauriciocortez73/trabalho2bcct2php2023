@@ -26,9 +26,6 @@
 <body>
     <nav>
         <div class="nav-wrapper brown darken-1">
-            <a href="#" class="brand-logo right">
-                <img src="../imagens/trator.jpg"  width="50" height="65">
-            </a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li><a href="\trabalho2bcct2php2023\VIEW\cliente\lstcliente.php">Cliente</a></li>
                 <li><a href="\trabalho2bcct2php2023\VIEW\ator\lstator.php">Atores</a></li>

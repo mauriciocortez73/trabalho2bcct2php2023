@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 26/05/2023 às 17:46
+-- Tempo de geração: 23/06/2023 às 17:41
 -- Versão do servidor: 10.4.28-MariaDB
--- Versão do PHP: 8.0.28
+-- Versão do PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,6 +33,13 @@ CREATE TABLE `ator` (
   `nome_real` varchar(50) NOT NULL,
   `nascimento` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+
+--
+-- Despejando dados para a tabela `ator`
+--
+
+INSERT INTO `ator` (`id`, `nome_artistico`, `nome_real`, `nascimento`) VALUES
+(1, 'The Rock', 'Dwayne Johnson', '1972-05-02');
 
 -- --------------------------------------------------------
 
@@ -76,6 +83,27 @@ CREATE TABLE `locacao` (
   `filme` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `usuario`
+--
+
+CREATE TABLE `usuario` (
+  `id` int(11) NOT NULL,
+  `usuario` varchar(20) NOT NULL,
+  `senha` varchar(30) NOT NULL,
+  `email` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+
+--
+-- Despejando dados para a tabela `usuario`
+--
+
+INSERT INTO `usuario` (`id`, `usuario`, `senha`, `email`) VALUES
+(1, 'Mauricio', '83c53d8f7b56da127b3defa0749a1a', 'maumau123br.cortez@gmail.com'),
+(2, 'felipe', '1f88b714bc391ad4110a05ce6f7536', 'felipe@gmail.com');
+
 --
 -- Índices para tabelas despejadas
 --
@@ -108,6 +136,12 @@ ALTER TABLE `locacao`
   ADD KEY `locacao_cliente` (`cliente`);
 
 --
+-- Índices de tabela `usuario`
+--
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT para tabelas despejadas
 --
 
@@ -115,7 +149,7 @@ ALTER TABLE `locacao`
 -- AUTO_INCREMENT de tabela `ator`
 --
 ALTER TABLE `ator`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `cliente`
@@ -128,6 +162,12 @@ ALTER TABLE `cliente`
 --
 ALTER TABLE `filme`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `usuario`
+--
+ALTER TABLE `usuario`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restrições para tabelas despejadas

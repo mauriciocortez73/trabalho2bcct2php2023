@@ -2,8 +2,8 @@
 
 namespace DAL;
 
-include_once 'C:\xampp\htdocs\lpbcct2php2023\DAL\conexao.php';
-include_once 'C:\xampp\htdocs\lpbcct2php2023\MODEL\Usuario.php';
+include_once 'C:\xampp\htdocs\trabalho2bcct2php2023\DAL\conexao.php';
+include_once 'C:\xampp\htdocs\trabalho2bcct2php2023\MODEL\Usuario.php';
 
 
 class dalUsuario
@@ -30,3 +30,4 @@ class dalUsuario
         return $usuario;
     }
 }
+?>
