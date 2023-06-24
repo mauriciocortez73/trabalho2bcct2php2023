@@ -1,10 +1,10 @@
 <?php
-include_once  'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllfilme.php';
+include_once  'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllFilme.php';
 
 $id = $_GET['id'];
 
-$bll = new  \BLL\bllfilme();
-$ator = $bll->SelectID($id);
+$bll = new  \BLL\bllFilme();
+$filme = $bll->SelectID($id);
 
 ?>
 
@@ -51,11 +51,11 @@ $ator = $bll->SelectID($id);
                     <label for="ano" class="black-text bold">Ano</label>
                 </div>
                 <div class="input-field col s8">
-                    <input id="valor" type="date" name="txtValor" value="<?php echo $filme->getValor() ?>">
+                    <input id="valor" type="text" name="txtValor" value="<?php echo $filme->getValor() ?>">
                     <label for="valor" class="black-text bold">Valor</label>
                 </div>
                 <div class="input-field col s8">
-                    <input id="categoria" type="date" name="txtCategoria" value="<?php echo $filme->getCategoria() ?>">
+                    <input id="categoria" type="text" name="txtCategoria" value="<?php echo $filme->getCategoria() ?>">
                     <label for="categoria" class="black-text bold">Categoria</label>
                 </div>
                 <div class="brown lighten-3 center col s12">

@@ -7,7 +7,7 @@
         private ?string $ano;
         private ?float $valor;
         private ?string $categoria;
-        private ?int $ator;
+        private ?string $ator;
 
         public function __construct() 
         {
@@ -50,7 +50,7 @@
             return $this->categoria; 
         }
 
-        public function setCategoria(float $categoria){
+        public function setCategoria(string $categoria){
             $this->categoria = $categoria; 
         }
 
@@ -58,7 +58,7 @@
             return $this->ator; 
         }
 
-        public function setAtor(int $ator){
+        public function setAtor(string $ator){
             $this->ator = $ator; 
         }
 

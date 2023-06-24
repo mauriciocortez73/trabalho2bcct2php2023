@@ -1,10 +1,10 @@
 <?php
-include_once  'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllcliente.php';
+include_once  'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllCliente.php';
 
 $id = $_GET['id'];
 
-$bll = new  \BLL\bllcliente();
-$ator = $bll->SelectID($id);
+$bll = new  \BLL\bllCliente();
+$cliente = $bll->SelectID($id);
 
 ?>
 
@@ -51,7 +51,7 @@ $ator = $bll->SelectID($id);
                     <label for="celular" class="black-text bold">Celular</label>
                 </div>
                 <div class="input-field col s8">
-                    <input id="email" type="date" name="txtEmail" value="<?php echo $cliente->getEmail() ?>">
+                    <input id="email" type="text" name="txtEmail" value="<?php echo $cliente->getEmail() ?>">
                     <label for="email" class="black-text bold">E-mail</label>
                 </div>
                 <div class="brown lighten-3 center col s12">

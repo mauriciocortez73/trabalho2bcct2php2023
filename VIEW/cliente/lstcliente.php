@@ -3,7 +3,7 @@
 
 use BLL\bllcliente;
 
-include_once  'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllcliente.php';
+include_once  'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllCliente.php';
 
 if (isset($_GET['busca']))
     $busca = $_GET['busca'];
@@ -11,7 +11,7 @@ else $busca = null;
 
 echo "Busca: " . $busca . "</br>";
 
-$bll = new \bll\bllclinete();
+$bll = new \bll\bllCliente();
 
 if ($busca == null)
     $lstcliente = $bll->Select();
@@ -42,7 +42,7 @@ else $lstcliente = $bll->SelectNome($busca);
     <h1>Listar Clientes</h1>
     <div class="row">
             <div class="input-field">
-                <form action="../ator/lstcliente.php" method="GET" id="frmBuscaCliente" class="col s8">
+                <form action="../cliente/lstcliente.php" method="GET" id="frmBuscaCliente" class="col s8">
                     <div class="input-field col s8">
                         <input type="text" placeholder="informe o nome do Cliente para ser selicionado" class="form-control col s10" id="txtBusca" name="busca">
                         <button class="btn waves-effect waves-light col m1" type="submit" name="action">

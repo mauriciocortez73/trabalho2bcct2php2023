@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24/06/2023 às 19:13
+-- Tempo de geração: 24/06/2023 às 20:06
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -54,6 +54,13 @@ CREATE TABLE `cliente` (
   `email` varchar(80) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
 
+--
+-- Despejando dados para a tabela `cliente`
+--
+
+INSERT INTO `cliente` (`id`, `nome`, `celular`, `email`) VALUES
+(74, 'Yudi', '(11)4002-8922', 'yudi@gmail.com');
+
 -- --------------------------------------------------------
 
 --
@@ -62,12 +69,19 @@ CREATE TABLE `cliente` (
 
 CREATE TABLE `filme` (
   `id` int(11) NOT NULL,
-  `titulo` varchar(35) NOT NULL,
-  `ano` year(4) NOT NULL,
-  `valor` float NOT NULL,
-  `categoria` varchar(35) NOT NULL,
-  `ator` int(11) NOT NULL
+  `titulo` varchar(90) NOT NULL,
+  `ano` varchar(4) NOT NULL,
+  `valor` int(11) NOT NULL,
+  `categoria` varchar(30) NOT NULL,
+  `ator` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+
+--
+-- Despejando dados para a tabela `filme`
+--
+
+INSERT INTO `filme` (`id`, `titulo`, `ano`, `valor`, `categoria`, `ator`) VALUES
+(1, 'Rocky', '1976', 60, 'luta', 'Sylvester Stallone');
 
 -- --------------------------------------------------------
 
@@ -78,9 +92,9 @@ CREATE TABLE `filme` (
 CREATE TABLE `locacao` (
   `retirada` date NOT NULL,
   `devolucao` date NOT NULL,
-  `valor` float NOT NULL,
-  `cliente` int(11) NOT NULL,
-  `filme` int(11) NOT NULL
+  `valor` int(11) NOT NULL,
+  `cliente` varchar(50) NOT NULL,
+  `filme` varchar(90) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
 
 -- --------------------------------------------------------
@@ -124,16 +138,7 @@ ALTER TABLE `cliente`
 -- Índices de tabela `filme`
 --
 ALTER TABLE `filme`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `filme_ator` (`ator`);
-
---
--- Índices de tabela `locacao`
---
-ALTER TABLE `locacao`
-  ADD PRIMARY KEY (`retirada`),
-  ADD KEY `locacao_filme` (`filme`),
-  ADD KEY `locacao_cliente` (`cliente`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Índices de tabela `usuario`
@@ -155,36 +160,13 @@ ALTER TABLE `ator`
 -- AUTO_INCREMENT de tabela `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de tabela `filme`
---
-ALTER TABLE `filme`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- Restrições para tabelas despejadas
---
-
---
--- Restrições para tabelas `filme`
---
-ALTER TABLE `filme`
-  ADD CONSTRAINT `filme_ator` FOREIGN KEY (`ator`) REFERENCES `ator` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Restrições para tabelas `locacao`
---
-ALTER TABLE `locacao`
-  ADD CONSTRAINT `locacao_cliente` FOREIGN KEY (`cliente`) REFERENCES `cliente` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `locacao_filme` FOREIGN KEY (`filme`) REFERENCES `filme` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

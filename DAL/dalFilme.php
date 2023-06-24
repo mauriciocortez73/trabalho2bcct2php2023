@@ -4,7 +4,7 @@
 use MODEL\Filme;
 
     include_once 'conexao.php';
-    include_once  'C:\xampp\htdocs\trabalho2bcct2php2023\MODEL\filme.php';
+    include_once  'C:\xampp\htdocs\trabalho2bcct2php2023\MODEL\Filme.php';
     
     
     class dalFilme {
@@ -13,7 +13,7 @@ use MODEL\Filme;
 
           
           $con = Conexao::conectar(); 
-          $sql = "select * from cliente;";
+          $sql = "select * from filme;";
 
           $result = $con->query($sql); 
           $con = Conexao::desconectar();

@@ -1,5 +1,5 @@
 <?php
-include_once  'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllator.php';
+include_once  'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllAtor.php';
 
 $id = $_GET['id'];
 
@@ -37,7 +37,7 @@ $ator = $bll->SelectID($id);
         <div class="row">
             <form action="recedtator.php" method="POST" id="frminsAtor" class="col s12">
                 <div class="input-field col s8">
-                    <label for="id" class="black-text bold">ID: <?php echo $Ator->getId(); ?></label>
+                    <label for="id" class="black-text bold">ID: <?php echo $ator->getId(); ?></label>
                     </br> </br>
                     <input type="hidden" name="txtID" value=<?php echo $id; ?>>
                 </div>

@@ -1,9 +1,9 @@
 <?php
 
 
-use BLL\bllfilme;
+use BLL\bllFilme;
 
-include_once  'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllfilme.php';
+include_once  'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllFilme.php';
 
 if (isset($_GET['busca']))
     $busca = $_GET['busca'];
@@ -11,11 +11,11 @@ else $busca = null;
 
 echo "Busca: " . $busca . "</br>";
 
-$bll = new \bll\bllfilme();
+$bll = new \bll\bllFilme();
 
 if ($busca == null)
-    $lstfilme = $bll->Select();
-else $lstfilme = $bll->SelectNome($busca);
+    $lstFilme = $bll->Select();
+else $lstFilme = $bll->SelectNome($busca);
           
 ?>
 
@@ -39,7 +39,7 @@ else $lstfilme = $bll->SelectNome($busca);
 
 <body>
     <div class="container">
-    <h1>Listar Atores</h1>
+    <h1>Listar Filmes</h1>
     <div class="row">
             <div class="input-field">
                 <form action="../filme/lstfilme.php" method="GET" id="frmBuscaFilme" class="col s8">
@@ -66,8 +66,8 @@ else $lstfilme = $bll->SelectNome($busca);
         </th>
     </tr>
     <?php
-    if ($lstfilme != null)
-        foreach ($lstfilme as $filme) {
+    if ($lstFilme != null)
+        foreach ($lstFilme as $filme) {
     ?>
         <tr>
             <td><?php echo $filme->getId(); ?></td>
@@ -77,11 +77,11 @@ else $lstfilme = $bll->SelectNome($busca);
             <td><?php echo $filme->getCategoria(); ?></td>
             <td>
                 <a class="btn-floating btn-small waves-effect waves-light blue" onclick="JavaScript:location.href='detfilme.php?id=' + 
-                       <?php echo $ator->getId(); ?>">
+                       <?php echo $filme->getId(); ?>">
                     <i class="material-icons">details</i>
                 </a>
                 <a class="btn-floating btn-small waves-effect waves-light orange" onclick="JavaScript:location.href='edtfilme.php?id=' + 
-                       <?php echo $ator->getId(); ?>">
+                       <?php echo $filme->getId(); ?>">
                     <i class="material-icons">edit</i>
                 </a>
                 <a class="btn-floating btn-small waves-effect waves-light red" onclick="JavaScript:remover(<?php echo $filme->getId(); ?>)">
@@ -105,8 +105,8 @@ else $lstfilme = $bll->SelectNome($busca);
 
 <script>
     function remover(id) {
-        if (confirm('Excluir o Ator ' + id + '?')) {
-            location.href = 'remator.php?id=' + id;
+        if (confirm('Excluir o Filme ' + id + '?')) {
+            location.href = 'remfilme.php?id=' + id;
         }
     }
 </script>
