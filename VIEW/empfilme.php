@@ -29,7 +29,7 @@
     </tr>
     <?php
     if ($lstator != null)
-        foreach ($lstator as $ator) {
+        foreach ($lstator as $ator) {}
     ?>
         <tr>
             <td><?php echo $ator->getId(); ?></td>
