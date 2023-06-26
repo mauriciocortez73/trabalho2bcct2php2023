@@ -30,7 +30,7 @@
                 <li><a href="\trabalho2bcct2php2023\VIEW\cliente\lstcliente.php">Cliente</a></li>
                 <li><a href="\trabalho2bcct2php2023\VIEW\ator\lstator.php">Atores</a></li>
                 <li><a href="\trabalho2bcct2php2023\VIEW\filme\listfilme.php">Filmes</a></li>
-                <li><a href="\trabalho2bcct2php2023\VIEW\empfilme.php">Emprestar filme</a></li>
+                <li><a href="\trabalho2bcct2php2023\VIEW\empfilme\lstempfilme.php">Emprestar filme</a></li>
                 <li><a href="\trabalho2bcct2php2023\VIEW\logout.php">Logout</a></li>
             </ul>
         </div>

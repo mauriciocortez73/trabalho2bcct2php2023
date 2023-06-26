@@ -42,7 +42,7 @@
             return $this->valor; 
         }
 
-        public function setValor(float $valor){
+        public function setValor(int $valor){
             $this->valor = $valor; 
         }
 

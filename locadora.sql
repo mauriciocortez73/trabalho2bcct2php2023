@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24/06/2023 às 20:06
+-- Tempo de geração: 27/06/2023 às 00:24
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -59,7 +59,31 @@ CREATE TABLE `cliente` (
 --
 
 INSERT INTO `cliente` (`id`, `nome`, `celular`, `email`) VALUES
-(74, 'Yudi', '(11)4002-8922', 'yudi@gmail.com');
+(74, 'Yudi', '(11)4002-8922', 'yudi@gmail.com'),
+(75, 'Kleber', '(18)99762-3650', 'klekle@gmail.com');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `empfilme`
+--
+
+CREATE TABLE `empfilme` (
+  `id` int(11) NOT NULL,
+  `filme` varchar(50) NOT NULL,
+  `retirada` date NOT NULL,
+  `devolucao` date NOT NULL,
+  `valor` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
+
+--
+-- Despejando dados para a tabela `empfilme`
+--
+
+INSERT INTO `empfilme` (`id`, `filme`, `retirada`, `devolucao`, `valor`) VALUES
+(1, 'Velozes e Furiosos 3', '2023-06-26', '2023-06-30', 25),
+(3, 'Os contos de Tururu', '2023-06-19', '2023-06-27', 60),
+(4, 'Pão pro Cachorro', '2023-06-26', '2023-06-27', 30);
 
 -- --------------------------------------------------------
 
@@ -82,20 +106,6 @@ CREATE TABLE `filme` (
 
 INSERT INTO `filme` (`id`, `titulo`, `ano`, `valor`, `categoria`, `ator`) VALUES
 (1, 'Rocky', '1976', 60, 'luta', 'Sylvester Stallone');
-
--- --------------------------------------------------------
-
---
--- Estrutura para tabela `locacao`
---
-
-CREATE TABLE `locacao` (
-  `retirada` date NOT NULL,
-  `devolucao` date NOT NULL,
-  `valor` int(11) NOT NULL,
-  `cliente` varchar(50) NOT NULL,
-  `filme` varchar(90) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -135,6 +145,12 @@ ALTER TABLE `cliente`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Índices de tabela `empfilme`
+--
+ALTER TABLE `empfilme`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Índices de tabela `filme`
 --
 ALTER TABLE `filme`
@@ -160,7 +176,19 @@ ALTER TABLE `ator`
 -- AUTO_INCREMENT de tabela `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
+
+--
+-- AUTO_INCREMENT de tabela `empfilme`
+--
+ALTER TABLE `empfilme`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de tabela `filme`
+--
+ALTER TABLE `filme`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`

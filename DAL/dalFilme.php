@@ -4,7 +4,7 @@
 use MODEL\Filme;
 
     include_once 'conexao.php';
-    include_once  'C:\xampp\htdocs\trabalho2bcct2php2023\MODEL\Filme.php';
+    include_once  'C:\xampp\htdocs\trabalho2bcct2php2023\MODEL\filme.php';
     
     
     class dalFilme {
@@ -41,7 +41,7 @@ use MODEL\Filme;
 
 
         public function SelectID(int $id){
-            $sql = "select * from Filme where id=?;";
+            $sql = "select * from filme where id=?;";
             $pdo = Conexao::conectar(); 
             $query = $pdo->prepare($sql);
             $query->execute (array($id));
@@ -64,7 +64,7 @@ use MODEL\Filme;
             $con = Conexao::conectar(); 
             $sql = "INSERT INTO filme (titulo, ano, valor, categoria, ator) 
                    VALUES  ('{$filme->getTitulo()}', '{$filme->getAno()}',
-                            '{$filme->getValor()}'), '{$filme->getCategoria()}'), '{$filme->getAtor()}');";
+                            '{$filme->getValor()}'), '{$filme->getCategoria()}', '{$filme->getAtor()}';";
      
             $result = $con->query($sql); 
             $con = Conexao::desconectar();
@@ -78,9 +78,8 @@ use MODEL\Filme;
             $pdo = Conexao::conectar(); 
             $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION); 
             $query = $pdo->prepare($sql);
-            $result = $query->execute(array($filme->getTitulo(), $filme->getAno(), 
-                                            $filme->getValor(), $filme->getCategoria(),
-                                            $filme->getAtor(), $filme->getId()));
+            $result = $query->execute(array($filme->getTitulo(), $filme->getano(), 
+                                            $filme->getValor(), $filme->getCategoria(), $filme->getAtor(), $filme->getId()));
             $con = Conexao::desconectar();
             return  $result; 
         }
