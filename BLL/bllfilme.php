@@ -20,7 +20,7 @@
 
         public function Insert (\MODEL\Filme $filme){
 
-           $dal = new \DAL\dalFilme(); 
+           $dal = new \Dal\dalFilme(); 
 
            $dal->Insert($filme);
           
@@ -28,7 +28,7 @@
 
         public function Update (\MODEL\Filme $filme){
 
-           $dal = new \DAL\dalFilme(); 
+           $dal = new \Dal\dalFilme(); 
 
            $dal->Update($filme);
           

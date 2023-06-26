@@ -1,5 +1,5 @@
 <?php
-    include_once 'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllator.php';
+    include_once 'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllAtor.php';
 
     $id = $_GET['id'];
 

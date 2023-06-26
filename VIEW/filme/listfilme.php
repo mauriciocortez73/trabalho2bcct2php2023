@@ -38,11 +38,12 @@ else $lstFilme = $bll->SelectNome($busca);
 </head>
 
 <body>
+    <?php include_once '../menu.php';?>
     <div class="container">
     <h1>Listar Filmes</h1>
     <div class="row">
             <div class="input-field">
-                <form action="../filme/lstfilme.php" method="GET" id="frmBuscaFilme" class="col s8">
+                <form action="../filme/listfilme.php" method="GET" id="frmBuscaFilme" class="col s8">
                     <div class="input-field col s8">
                         <input type="text" placeholder="informe o nome do Filme para ser selecionado" class="form-control col s10" id="txtBusca" name="busca">
                         <button class="btn waves-effect waves-light col m1" type="submit" name="action">
@@ -99,7 +100,7 @@ else $lstFilme = $bll->SelectNome($busca);
 
 </table>
     </div>
-
+    <?php include_once '../footer.php';?>
 </body>
 
 </html>

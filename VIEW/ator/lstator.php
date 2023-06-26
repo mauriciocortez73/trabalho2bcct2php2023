@@ -3,7 +3,7 @@
 
 use BLL\bllAtor;
 
-include_once  'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllator.php';
+include_once  'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllAtor.php';
 
 if (isset($_GET['busca']))
     $busca = $_GET['busca'];
@@ -38,6 +38,7 @@ else $lstator = $bll->SelectNome($busca);
 </head>
 
 <body>
+    <?php include_once '../menu.php';?>
     <div class="container">
     <h1>Listar Atores</h1>
     <div class="row">
@@ -59,7 +60,7 @@ else $lstator = $bll->SelectNome($busca);
         <th>NOME REAL</th>
         <th>NASCIMENTO</th>
         <th>FUNÇÃO
-            <a class="btn-floating btn-small waves-effect waves-light green" onclick="JavaScript:location.href='insarea.php'">
+            <a class="btn-floating btn-small waves-effect waves-light green" onclick="JavaScript:location.href='inseator.php'">
                 <i class="material-icons">add</i>
             </a>
         </th>
@@ -95,7 +96,7 @@ else $lstator = $bll->SelectNome($busca);
 
 </table>
     </div>
-
+    <?php include_once '../footer.php';?>
 </body>
 
 </html>

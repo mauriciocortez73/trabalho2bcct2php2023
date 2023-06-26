@@ -26,23 +26,23 @@
 
       <div class="row">
             <form action="recinsfilme.php" method="POST" id="frminsFilme" class="col s12">
-              <div class="input-field col s30">
+              <div class="input-field col s8">
                   <input id="titulo" type="text" name="txtTitulo">
                   <label for="titulo" class="black-text bold" >Titulo</label>
               </div>
-              <div class="input-field col s4">
+              <div class="input-field col s8">
                   <input id="ano" type="text" name="txtAno">
                   <label for="ano" class="black-text bold" >Ano</label>
               </div>
-              <div class="input-field col s5">
+              <div class="input-field col s8">
                   <input id="valor" type="text" name="txtValor">
                   <label for="valor" class="black-text bold" >Valor R$</label>
               </div>
-              <div class="input-field col s12">
+              <div class="input-field col s8">
                   <input id="categoria" type="text" name="txtCategoria">
                   <label for="categoria" class="black-text bold" >Categoria</label>
               </div>
-              <div class="input-field col s20">
+              <div class="input-field col s8">
                   <input id="ator" type="text" name="txtAtor">
                   <label for="ator" class="black-text bold" >Ator</label>
               </div>

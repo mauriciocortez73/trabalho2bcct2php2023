@@ -5,7 +5,7 @@
         private ?int $id; 
         private ?string $titulo;
         private ?string $ano;
-        private ?float $valor;
+        private ?int $valor;
         private ?string $categoria;
         private ?string $ator;
 

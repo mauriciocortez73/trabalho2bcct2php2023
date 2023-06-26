@@ -1,6 +1,6 @@
 <?php
-    include_once 'C:\xampp\htdocs\trabalho2bcct2php2023\MODEL\ator.php';
-    include_once 'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllator.php';
+    include_once 'C:\xampp\htdocs\trabalho2bcct2php2023\MODEL\Ator.php';
+    include_once 'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllAtor.php';
 
    $ator = new \MODEL\Ator(); 
    

@@ -38,6 +38,7 @@ else $lstcliente = $bll->SelectNome($busca);
 </head>
 
 <body>
+    <?php include_once '../menu.php';?>
     <div class="container">
     <h1>Listar Clientes</h1>
     <div class="row">
@@ -95,7 +96,7 @@ else $lstcliente = $bll->SelectNome($busca);
 
 </table>
     </div>
-
+    <?php include_once '../footer.php';?>
 </body>
 
 </html>
