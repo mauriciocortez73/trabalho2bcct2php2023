@@ -13,7 +13,7 @@ use MODEL\Filme;
 
           
           $con = Conexao::conectar(); 
-          $sql = "select * from filme;";
+          $sql = "select * from Filme;";
 
           $result = $con->query($sql); 
           $con = Conexao::desconectar();
@@ -41,7 +41,7 @@ use MODEL\Filme;
 
 
         public function SelectID(int $id){
-            $sql = "select * from filme where id=?;";
+            $sql = "select * from Filme where id=?;";
             $pdo = Conexao::conectar(); 
             $query = $pdo->prepare($sql);
             $query->execute (array($id));
@@ -62,10 +62,9 @@ use MODEL\Filme;
 
         public function Insert(\MODEL\Filme $filme){
             $con = Conexao::conectar(); 
-            $sql = "INSERT INTO filme (titulo, ano, valor, categoria, ator) 
+            $sql = "INSERT INTO filme (nome, aniversario, salario) 
                    VALUES  ('{$filme->getTitulo()}', '{$filme->getAno()}',
-                            '{$filme->getValor()}', '{$filme->getCategoria()}',
-                            '{$filme->getAtor()}');";
+                            '{$filme->getValor()}');";
      
             $result = $con->query($sql); 
             $con = Conexao::desconectar();
@@ -80,14 +79,15 @@ use MODEL\Filme;
             $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION); 
             $query = $pdo->prepare($sql);
             $result = $query->execute(array($filme->getTitulo(), $filme->getAno(), 
-                                            $filme->getValor(), $filme->getCategoria(), $filme->getAtor()));
+                                            $filme->getValor(), $filme->getCategoria(),
+                                            $filme->getAtor(), $filme->getId()));
             $con = Conexao::desconectar();
             return  $result; 
         }
 
 
-        public function DElete(int $id){
-            $sql = "DELETE from filme WHERE id=?";
+        public function Delete(int $id){
+            $sql = "DELETE from Filme WHERE id=?";
 
             $pdo = Conexao::conectar(); 
             $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION); 

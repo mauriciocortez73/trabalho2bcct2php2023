@@ -35,7 +35,7 @@ $filme = $bll->SelectID($id);
         </div>
 
         <div class="row">
-            <form action="recedtator.php" method="POST" id="frminsAtor" class="col s12">
+            <form action="recedtfilme.php" method="POST" id="frminsFilme" class="col s12">
                 <div class="input-field col s8">
                     <label for="id" class="black-text bold">ID: <?php echo $filme->getId(); ?></label>
                     </br> </br>
@@ -58,6 +58,10 @@ $filme = $bll->SelectID($id);
                     <input id="categoria" type="text" name="txtCategoria" value="<?php echo $filme->getCategoria() ?>">
                     <label for="categoria" class="black-text bold">Categoria</label>
                 </div>
+                <div class="input-field col s8">
+                    <input id="ator" type="text" name="txtAtor" value="<?php echo $filme->getAtor() ?>">
+                    <label for="ator" class="black-text bold">Ator</label>
+                </div>
                 <div class="brown lighten-3 center col s12">
                     <br>
                     <button class="waves-effect waves-light btn green" type="submit">
@@ -66,7 +70,7 @@ $filme = $bll->SelectID($id);
                     <button class="waves-effect waves-light btn red" type="reset">
                         Limpar <i class="material-icons">clear_all</i>
                     </button>
-                    <button class="waves-effect waves-light btn blue" type="button" onclick="JavaScript:location.href='lstfilme.php'">
+                    <button class="waves-effect waves-light btn blue" type="button" onclick="JavaScript:location.href='listfilme.php'">
                         Voltar <i class="material-icons">arrow_back</i>
                     </button>
                     <br>

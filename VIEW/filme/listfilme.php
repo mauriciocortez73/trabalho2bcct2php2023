@@ -57,10 +57,11 @@ else $lstFilme = $bll->SelectNome($busca);
         <th>ID</th>
         <th>TITULO</th>
         <th>ANO</th>
-        <th>VALOR</th>
+        <th>VALOR R$</th>
         <th>CATEGORIA</th>
+        <th>ATOR</th>
         <th>FUNÇÃO
-            <a class="btn-floating btn-small waves-effect waves-light green" onclick="JavaScript:location.href='insfilme.php'">
+            <a class="btn-floating btn-small waves-effect waves-light green" onclick="JavaScript:location.href='insefilme.php'">
                 <i class="material-icons">add</i>
             </a>
         </th>
@@ -75,6 +76,7 @@ else $lstFilme = $bll->SelectNome($busca);
             <td><?php echo $filme->getAno(); ?></td>
             <td><?php echo $filme->getValor(); ?></td>
             <td><?php echo $filme->getCategoria(); ?></td>
+            <td><?php echo $filme->getAtor(); ?></td>
             <td>
                 <a class="btn-floating btn-small waves-effect waves-light blue" onclick="JavaScript:location.href='detfilme.php?id=' + 
                        <?php echo $filme->getId(); ?>">

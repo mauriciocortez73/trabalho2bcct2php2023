@@ -1,5 +1,5 @@
 <?php
-include_once 'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllfilme.php';
+include_once 'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllFilme.php';
 $id = $_GET['id'];
 
 $bll = new  \BLL\bllFilme();
@@ -47,7 +47,7 @@ $filme = $bll->SelectID($id);
                 </label>
                 </br><br>
             </div>
-	    <div class="input-field col s8">
+	        <div class="input-field col s8">
                 <label for="ano" class="black-text bold">
                     <h5>Ano: <?php echo $filme->getAno(); ?></h5>
                 </label>
@@ -65,6 +65,12 @@ $filme = $bll->SelectID($id);
                 </label>
                 </br><br>
             </div>
+            <div class="input-field col s8">
+                <label for="ator" class="black-text bold">
+                    <h5>Ator: <?php echo $filme->getAtor(); ?></h5>
+                </label>
+                </br><br>
+            </div>
         </div>
         <div class="brown lighten-3 center col s12">
             <br>
@@ -75,7 +81,7 @@ $filme = $bll->SelectID($id);
             <button class="waves-effect waves-light btn red" type="button" onclick="JavaScript: remover(<?php echo $filme->getId(); ?>);">
                 Remover <i class="material-icons">delete_forever</i>
             </button>
-            <button class="waves-effect waves-light btn blue" type="button" onclick="JavaScript:location.href='lstfilme.php'">
+            <button class="waves-effect waves-light btn blue" type="button" onclick="JavaScript:location.href='listfilme.php'">
                 Listar <i class="material-icons">list</i>
             </button>
             <br>

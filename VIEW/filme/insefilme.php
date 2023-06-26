@@ -1,55 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inserir Filme</title>
+    
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+     
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
-<div class="center grey">
-        <h1> Inserir Filme</h1>
+    <?php include_once '../menu.php';?>
+    <div class="container teal lighten-5 black-text col s12">
+      <div class="center orange">
+          <h1>Inserir Filme</h1>
+      </div>
+
+      <div class="row">
+            <form action="recinsfilme.php" method="POST" id="frminsFilme" class="col s12">
+              <div class="input-field col s30">
+                  <input id="titulo" type="text" name="txtTitulo">
+                  <label for="titulo" class="black-text bold" >Titulo</label>
+              </div>
+              <div class="input-field col s4">
+                  <input id="ano" type="text" name="txtAno">
+                  <label for="ano" class="black-text bold" >Ano</label>
+              </div>
+              <div class="input-field col s5">
+                  <input id="valor" type="text" name="txtValor">
+                  <label for="valor" class="black-text bold" >Valor R$</label>
+              </div>
+              <div class="input-field col s12">
+                  <input id="categoria" type="text" name="txtCategoria">
+                  <label for="categoria" class="black-text bold" >Categoria</label>
+              </div>
+              <div class="input-field col s20">
+                  <input id="ator" type="text" name="txtAtor">
+                  <label for="ator" class="black-text bold" >Ator</label>
+              </div>
+              <div class="brown lighten-3 center col s12">
+        <br>
+        <button class="waves-effect waves-light btn green" type="submit">
+            Gravar <i class="material-icons">save</i>
+        </button>
+        <button class="waves-effect waves-light btn red" type = "reset">
+            Limpar <i class="material-icons">clear_all</i>
+        </button>
+        <button class="waves-effect waves-light btn blue" type="button" onclick="JavaScript:location.href='listfilme.php'">
+            Voltar <i class="material-icons">arrow_back</i>
+        </button>
+        <br>
+        <br>
+      </div>
+      
+      
+            </form>
+      </div>
+
+
+
     </div>
-    <div class= 'suportedois'>
-
-
-<div style="margin-top: 30px;" class="container">
-<form method="POST" action="">
-
-<h3>Inserir Ator</h3><br>
-<label for="id" >ID: <?php echo $filme->setId(); ?></label>
-                 </br> </br>
-                 <input type="hidden" name="txtID" value=<?php echo $id; ?>>
-<br>
-<label for="titulo" >Titulo: <?php echo $filme->setTitulo(); ?></label>
-                 </br> </br>
-                 <input type="hidden" name="txtID" value=<?php echo $titulo; ?>>
-<br>
-<label for="ano" >Ano: <?php echo $filme->setAno(); ?></label>
-                 </br> </br>
-                 <input type="hidden" name="txtID" value=<?php echo $ano; ?>>
-<br>
-<label for="valor" >Valor: <?php echo $filme->setValor(); ?></label>
-                 </br> </br>
-                 <input type="hidden" name="txtID" value=<?php echo $valor     ; ?>>
-<br>
-<label for="categoria" >Categoria: <?php echo $filme->setCategoria(); ?></label>
-                 </br> </br>
-                 <input type="hidden" name="txtID" value=<?php echo $categoria; ?>>
-<br>
-
-            
-
-
-<p><input type="submit" value="Confirmar" name="confirmar"><input type="reset" value="Limpar" name="B2"></p>
-</form>
-<br>
-</div>
-</div>
+    <?php include_once '../footer.php';?>
 </body>
+
 </html>

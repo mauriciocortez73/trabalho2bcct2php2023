@@ -7,5 +7,5 @@
     unset($_SESSION['login']);
 
     //redireciona para index.php-login
-    Header("location: /view/index.php"); 
+    Header("location: index.php"); 
 ?>

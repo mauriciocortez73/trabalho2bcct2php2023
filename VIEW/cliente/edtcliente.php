@@ -29,13 +29,14 @@ $cliente = $bll->SelectID($id);
 </head>
 
 <body>
+    <?php include_once '../menu.php';?>
     <div class="container teal lighten-5 black-text col s12">
         <div class="center orange">
             <h1>Editar Cliente</h1>
         </div>
 
         <div class="row">
-            <form action="recedtator.php" method="POST" id="frminsAtor" class="col s12">
+            <form action="recedtcliente.php" method="POST" id="frminsCliente" class="col s12">
                 <div class="input-field col s8">
                     <label for="id" class="black-text bold">ID: <?php echo $cliente->getId(); ?></label>
                     </br> </br>

@@ -1,7 +1,7 @@
 <?php
 
 
-use BLL\bllcliente;
+use BLL\bllCliente;
 
 include_once  'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllCliente.php';
 
@@ -59,7 +59,7 @@ else $lstcliente = $bll->SelectNome($busca);
         <th>CELULAR</th>
         <th>E-MAIL</th>
         <th>FUNÇÃO
-            <a class="btn-floating btn-small waves-effect waves-light green" onclick="JavaScript:location.href='insarea.php'">
+            <a class="btn-floating btn-small waves-effect waves-light green" onclick="JavaScript:location.href='insecliente.php'">
                 <i class="material-icons">add</i>
             </a>
         </th>
