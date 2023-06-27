@@ -35,9 +35,6 @@
             </ul>
         </div>
     </nav>
-    <br>
-
-    <?php include_once '../footer.php';?>
 </body>
 
 </html>
