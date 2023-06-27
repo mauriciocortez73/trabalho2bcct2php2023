@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -40,7 +40,9 @@
     <title>Sistema de Controle Locadora</title>
 </head>
 
-<body>
+<body background="../imagens/wallcine.jpg" widht: 100%  height: 100%;>
+    
+
     <nav>
         <div class="nav-wrapper red darken-1">
             <ul id="nav-mobile" class="left hide-on-med-and-down">
@@ -52,7 +54,14 @@
             </ul>
         </div>
     </nav>
-
+    
+   </div>
+</div>
+    <div class="carousel">
+    <a class="carousel-item" href="#one!"><img src="../imagens/john.jpg"></a>
+    <a class="carousel-item" href="#two!"><img src="../imagens/missao.jpg"></a>
+    <a class="carousel-item" href="#three!"><img src="../imagens/velozes.jpg"></a>
+  </div>
 </body>
 
 </html>

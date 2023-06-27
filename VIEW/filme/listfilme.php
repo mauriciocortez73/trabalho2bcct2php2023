@@ -5,17 +5,15 @@ use BLL\bllFilme;
 
 include_once  'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllFilme.php';
 
-if (isset($_GET['busca']))
-    $busca = $_GET['busca'];
-else $busca = null;
 
-echo "Busca: " . $busca . "</br>";
+
+
 
 $bll = new \bll\bllFilme();
 
-if ($busca == null)
+
     $lstFilme = $bll->Select();
-else $lstFilme = $bll->SelectNome($busca);
+
           
 ?>
 
@@ -49,27 +47,21 @@ else $lstFilme = $bll->SelectNome($busca);
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="style.css">
-
+<style>
+.ytext {
+	color: #FFF000;
+}
+</style>
     <title>Listar Filmes</title>
 </head>
 
-<body background="../imagens/elementos-de-cinema.jpg">
+<body>
     <?php include_once '../menu.php';?>
     <div class="container">
-    <h1>Listar Filmes</h1>
-    <div class="row">
-            <div class="input-field">
-                <form action="../filme/listfilme.php" method="GET" id="frmBuscaFilme" class="col s8">
-                    <div class="input-field col s8">
-                        <input type="text" placeholder="informe o nome do Filme para ser selecionado" class="form-control col s10" id="txtBusca" name="busca">
-                        <button class="btn waves-effect waves-light col m1" type="submit" name="action">
-                            <i class="material-icons right">search</i></button>
-                    </div>
-                </form>
-            </div>
-        </div>
+    <h1 class='ynext'>Listar Filmes</h1>
+ 
 
-<table class="striped green lighten-2">
+<table class="striped grey darken-2">
     <tr>
         <th>ID</th>
         <th>TITULO</th>
@@ -117,34 +109,7 @@ else $lstFilme = $bll->SelectNome($busca);
 </table>
 <br>
 <br>
-<center>
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-55" width="100%" src="john.jpg" alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-55" width="100%" src="missao.jpg" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-55" width="100%" src="velozes.jpg" alt="Third slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-</center>
+
     </div>
     <br>
     <br>
@@ -153,13 +118,7 @@ else $lstFilme = $bll->SelectNome($busca);
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
 
     <?php include_once '../footer.php';?>
 </body>

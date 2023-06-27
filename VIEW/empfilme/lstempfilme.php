@@ -50,7 +50,7 @@ $lstempfilme = $bll->Select();
     <?php include_once '../menu.php';?>
     <div class="container">
     <h1>Listar locações</h1>
-<table class="striped green lighten-2">
+<table class="striped grey darken-2">
     <tr>
         <th>ID</th>
         <th>FILME</th>
@@ -103,13 +103,7 @@ $lstempfilme = $bll->Select();
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
     <?php include_once '../footer.php';?>
 </body>
 

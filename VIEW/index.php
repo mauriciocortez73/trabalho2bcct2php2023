@@ -25,10 +25,14 @@
     <script src="mySpxript.js"></script>
 </head>
 
-<body>
-
+<body background="../imagens/fundologin.jpg">
+<center>
+<div class= 'suportedois'>
     <div class="had-container">
+    <center>
 
+<img src='head2.jpg' height='150px' width='150px'>
+</center>
         <div class="parallax-container logueo">
             <div class="parallax"><img src="https://alistapart.com/d/438/fig-6--background-blend-mode.jpg"></div>
             <div class="row"><br>
@@ -36,7 +40,7 @@
                     <h4 class="truncate bg-card-user">
                         <img src="../VIEW/imagens/head2.png" alt="" height="110">
                         <div class="row login">
-                            <h4>Informe os seus dados de acesso!!!!</h4>
+                            <h4>Informe os seus dados de acesso</h4>
                             <form method="POST" action="login.php" class="col s12">
                                 <div class="row">
                                     <div class="input-field col m12 s12">
@@ -64,7 +68,10 @@
     </div>
 
     </div> <!-- fin del .container -->
-
+    </div>
+</center>
+<br>
+<br>
     <?php include_once 'footer.php' ?>
 
 

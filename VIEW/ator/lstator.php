@@ -5,17 +5,13 @@ use BLL\bllAtor;
 
 include_once  'C:\xampp\htdocs\trabalho2bcct2php2023\BLL\bllAtor.php';
 
-if (isset($_GET['busca']))
-    $busca = $_GET['busca'];
-else $busca = null;
 
-echo "Busca: " . $busca . "</br>";
 
 $bll = new \bll\bllAtor();
 
-if ($busca == null)
+
     $lstator = $bll->Select();
-else $lstator = $bll->SelectNome($busca);
+
           
 ?>
 
@@ -57,19 +53,9 @@ else $lstator = $bll->SelectNome($busca);
     <?php include_once '../menu.php';?>
     <div class="container">
     <h1>Listar Atores</h1>
-    <div class="row">
-            <div class="input-field">
-                <form action="../ator/lstator.php" method="GET" id="frmBuscaAtor" class="col s8">
-                    <div class="input-field col s8">
-                        <input type="text" placeholder="informe o nome do Ator para ser selicionado" class="form-control col s10" id="txtBusca" name="busca">
-                        <button class="btn waves-effect waves-light col m1" type="submit" name="action">
-                            <i class="material-icons right">search</i></button>
-                    </div>
-                </form>
-            </div>
-        </div>
+    
 
-<table class="striped green lighten-2">
+<table class="striped grey darken-2">
     <tr>
         <th>ID</th>
         <th>NOME ARTISTICO</th>
@@ -120,13 +106,7 @@ else $lstator = $bll->SelectNome($busca);
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
     <?php include_once '../footer.php';?>
 </body>
 
