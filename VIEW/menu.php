@@ -65,10 +65,10 @@
       <img class="d-block w-55" width="100%" src="john.jpg" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-55" width="100%" src="imagens\missao.jpg" alt="Second slide">
+      <img class="d-block w-55" width="100%" src="missao.jpg" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-55" width="100%" src="imagens\velozes.jpg" alt="Third slide">
+      <img class="d-block w-55" width="100%" src="velozes.jpg" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
