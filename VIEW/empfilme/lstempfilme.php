@@ -94,6 +94,15 @@ $lstempfilme = $bll->Select();
 
 
 </table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
     </div>
     <?php include_once '../footer.php';?>
 </body>

@@ -115,6 +115,15 @@ else $lstFilme = $bll->SelectNome($busca);
 
 
 </table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
     </div>
     <?php include_once '../footer.php';?>
 </body>
