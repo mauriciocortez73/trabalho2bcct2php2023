@@ -12,3 +12,10 @@
 	border-style:solid;
 	border-radius: 20px;
 }
+
+.fundo{
+	background-image:url(elementos-de-cinema.jpg);
+		background-repeat:no-repeat;
+		background-size:100%;
+		background-attachment:fixed;
+	}
