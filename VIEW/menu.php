@@ -35,6 +35,15 @@
             </ul>
         </div>
     </nav>
+    <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
     <?php include_once '../footer.php';?>
 </body>
 
