@@ -113,6 +113,20 @@ else $lstator = $bll->SelectNome($busca);
 </table>
 
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <?php include_once '../footer.php';?>
 </body>
 
