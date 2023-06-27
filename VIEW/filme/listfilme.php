@@ -53,7 +53,7 @@ else $lstFilme = $bll->SelectNome($busca);
     <title>Listar Filmes</title>
 </head>
 
-<body background="elementos-de-cinema.jpg">
+<body background="../imagens/elementos-de-cinema.jpg">
     <?php include_once '../menu.php';?>
     <div class="container">
     <h1>Listar Filmes</h1>
