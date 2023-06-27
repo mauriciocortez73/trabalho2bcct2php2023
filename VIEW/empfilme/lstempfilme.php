@@ -46,7 +46,7 @@ $lstempfilme = $bll->Select();
     <title>Listar Locações</title>
 </head>
 
-<body class='fundo'>
+<body>
     <?php include_once '../menu.php';?>
     <div class="container">
     <h1>Listar locações</h1>

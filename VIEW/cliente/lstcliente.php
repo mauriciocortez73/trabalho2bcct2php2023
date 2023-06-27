@@ -53,7 +53,7 @@ else $lstcliente = $bll->SelectNome($busca);
     <title>Listar Clientes</title>
 </head>
 
-<body class='fundo'>
+<body >
     <?php include_once '../menu.php';?>
     <div class="container">
     <h1>Listar Clientes</h1>
