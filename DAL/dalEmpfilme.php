@@ -13,7 +13,7 @@ use MODEL\Empfilme;
 
           
           $con = Conexao::conectar(); 
-          $sql = "select * from empfilme;";
+          $sql = "select * from Empfilme;";
 
           $result = $con->query($sql); 
           $con = Conexao::desconectar();

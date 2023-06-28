@@ -31,7 +31,7 @@ $cliente = $bll->SelectID($id);
 <body>
     <?php include_once '../menu.php';?>
     <div class="container teal lighten-5 black-text col s12">
-        <div class="center orange">
+        <div class="center red darken-2">
             <h1>Editar Cliente</h1>
         </div>
 
@@ -55,7 +55,7 @@ $cliente = $bll->SelectID($id);
                     <input id="email" type="text" name="txtEmail" value="<?php echo $cliente->getEmail() ?>">
                     <label for="email" class="black-text bold">E-mail</label>
                 </div>
-                <div class="brown lighten-3 center col s12">
+                <div class="red darken-2 center col s12">
                     <br>
                     <button class="waves-effect waves-light btn green" type="submit">
                         Gravar <i class="material-icons">save</i>

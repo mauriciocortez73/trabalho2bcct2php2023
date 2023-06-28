@@ -63,9 +63,7 @@ use MODEL\Filme;
         public function Insert(\MODEL\Filme $filme){
             $con = Conexao::conectar(); 
             $sql = "INSERT INTO filme (titulo, ano, valor, categoria, ator) 
-                   VALUES  ('{$filme->getTitulo()}', '{$filme->getAno()}',
-                            '{$filme->getValor()}'), '{$filme->getCategoria()}', '{$filme->getAtor()}';";
-     
+                   VALUES  ('{$filme->getTitulo()}', '{$filme->getAno()}', '{$filme->getValor()}', '{$filme->getCategoria()}', '{$filme->getAtor()}');";
             $result = $con->query($sql); 
             $con = Conexao::desconectar();
             return $result; 

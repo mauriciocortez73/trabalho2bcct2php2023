@@ -30,7 +30,7 @@ $filme = $bll->SelectID($id);
 
 <body>
     <div class="container teal lighten-5 black-text col s12">
-        <div class="center orange">
+        <div class="center red darken-2">
             <h1>Editar Filme</h1>
         </div>
 
@@ -62,7 +62,7 @@ $filme = $bll->SelectID($id);
                     <input id="ator" type="text" name="txtAtor" value="<?php echo $filme->getAtor() ?>">
                     <label for="ator" class="black-text bold">Ator</label>
                 </div>
-                <div class="brown lighten-3 center col s12">
+                <div class="red darken-2 center col s12">
                     <br>
                     <button class="waves-effect waves-light btn green" type="submit">
                         Gravar <i class="material-icons">save</i>

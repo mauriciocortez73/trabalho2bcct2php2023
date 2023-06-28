@@ -31,7 +31,7 @@ $empfilme = $bll->SelectID($id);
 <body>
     <?php include_once '../menu.php';?>
     <div class="container teal lighten-5 black-text col s12">
-        <div class="center orange">
+        <div class="center red darken-2">
             <h1>Editar Locação</h1>
         </div>
 
@@ -59,7 +59,7 @@ $empfilme = $bll->SelectID($id);
                     <input id="valor" type="text" name="txtValor" value="<?php echo $empfilme->getValor() ?>">
                     <label for="valor" class="black-text bold">Valor R$</label>
                 </div>
-                <div class="brown lighten-3 center col s12">
+                <div class="red darken-2 center col s12">
                     <br>
                     <button class="waves-effect waves-light btn green" type="submit">
                         Gravar <i class="material-icons">save</i>

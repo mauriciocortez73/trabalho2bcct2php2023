@@ -29,7 +29,7 @@ $empfilme = $bll->SelectID($id);
 <body>
 
     <div class="container teal lighten-5 black-text col s12">
-        <div class="center orange">
+        <div class="center red darken-2">
             <h1>Detalhes da Locação do Filme</h1>
         </div>
 
@@ -66,7 +66,7 @@ $empfilme = $bll->SelectID($id);
                 </br><br>
             </div>
         </div>
-        <div class="brown lighten-3 center col s12">
+        <div class="red darken-2 center col s12">
             <br>
             <button class="waves-effect waves-light btn orange" type="button" onclick="JavaScript:location.href='edtempfilme.php?id=' +
                                      <?php echo $empfilme->getId(); ?>">
