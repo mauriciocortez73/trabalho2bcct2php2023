@@ -31,16 +31,17 @@
     <div class="had-container">
     <center>
 
-<img src='head2.jpg' height='150px' width='150px'>
-</center>
+<img src="trabalho2bcct2php2023/view/imagens/head2.jpg" height='150px' width='150px'>
+    </center>
         <div class="parallax-container logueo">
-            <div class="parallax"><img src="https://alistapart.com/d/438/fig-6--background-blend-mode.jpg"></div>
+            
             <div class="row"><br>
                 <div class="col m8 s8 offset-m2 offset-s2 center">
                     <h4 class="truncate bg-card-user">
-                        <img src="../VIEW/imagens/head2.png" alt="" height="110">
+                        
                         <div class="row login">
-                            <h4>Informe os seus dados de acesso</h4>
+                            <h4>Login</h4>
+                            <h4>Admin</h4>
                             <form method="POST" action="login.php" class="col s12">
                                 <div class="row">
                                     <div class="input-field col m12 s12">
@@ -72,6 +73,8 @@
 </center>
 <br>
 <br>
+
+<br>
     <?php include_once 'footer.php' ?>
 
 
@@ -82,7 +85,7 @@
 <script>
     $(document).ready(function() {
         $('.button-collapse').sideNav({
-            menuWidth: 300, // Default is 300
+            
             edge: 'left', // Choose the horizontal origin
             closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
             draggable: true, // Choose whether you can drag to open on touch screens,
