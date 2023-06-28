@@ -25,13 +25,13 @@
     <script src="mySpxript.js"></script>
 </head>
 
-<body background="../imagens/fundologin.jpg">
+<body background="imagens/fundologin.jpg">
 <center>
 <div class= 'suportedois'>
     <div class="had-container">
     <center>
 
-<img src="trabalho2bcct2php2023/view/imagens/head2.jpg" height='150px' width='150px'>
+<img src="imagens/head2.jpg" height='150px' width='150px'>
     </center>
         <div class="parallax-container logueo">
             
