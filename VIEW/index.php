@@ -25,7 +25,7 @@
     <script src="mySpxript.js"></script>
 </head>
 
-<body background="imagens/fundologin.jpg" widht: 100%  height: 100%;">
+<body background="imagens/fundologin.jpg" widht: 100%  height: 100%;>
 <center>
 <div class= 'suportedois'>
     <div class="had-container">
