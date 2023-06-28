@@ -57,11 +57,9 @@
     
    </div>
 </div>
-    <div class="carousel">
-    <a class="carousel-item" href="#one!"><img src="../imagens/john.jpg"></a>
-    <a class="carousel-item" href="#two!"><img src="../imagens/missao.jpg"></a>
-    <a class="carousel-item" href="#three!"><img src="../imagens/velozes.jpg"></a>
-  </div>
+<br>
+<br>
+<br>
 </body>
 
 </html>
